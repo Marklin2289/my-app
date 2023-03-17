@@ -21,6 +21,7 @@ export const Dropdown: React.FC<DropdownItemProps> = ({ icon, options }) => {
           {options.map((option: Option) => {
             return (
               <button
+                key={option.value}
                 onClick={
                   option.value === "Edit"
                     ? () => setIsOpen(false)
